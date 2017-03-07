@@ -1,0 +1,26 @@
+<style type="text/css">
+	li{min-height:30px;line-height:30px;}
+	.second{margin-left:20px;margin-bottom:10px;}
+	.third{margin-left:40px;margin-bottom:10px;}
+</style>
+<div class="allTable">
+	<ul ng-repeat="(k, v) in nodeList">
+		<li class="first">
+			<span>{{v.remark}}</span>
+			<input type="checkbox" value="{{v.id}}" class="access" />
+			<ul ng-repeat="(k2, v2) in v.child">
+				<li class="second">
+					<span>{{v2.remark}}</span>
+					<input type="checkbox" value="{{v2.id}}" class="access" />
+					<ul ng-repeat="(k3, v3) in v2.child">
+						<li class="third">
+							<span>{{v3.remark}}</span>
+							<input type="checkbox" value="{{v3.id}}" class="access" />
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<input type="button" value="确认修改" class="commonBtn" ng-click="changeAccess(rid);" />
+</div>

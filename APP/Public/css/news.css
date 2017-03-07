@@ -1,0 +1,12 @@
+.newsContent{clear:both;margin-bottom:10px;}
+.articleTitle{margin-bottom:10px;text-align:center;}
+.articleTitle h1{font-size:16px;margin-bottom:10px;}
+.articleTitle span{color:#585858;}
+.articleContent{line-height:25px;}
+
+@media only screen and (min-width:1000px){
+	.articleRecom ul li{width:48%;float:left;margin-right:1%;}
+}
+@media only screen and (max-width:999px){
+
+}

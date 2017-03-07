@@ -1,0 +1,26 @@
+<div class="allTable">
+	<table cellpadding="0" cellpadding="0">
+		<thead>
+			<tr>
+				<td>ID</td>
+				<td>标题</td>
+				<td>时间</td>
+				<td>点击</td>
+				<td>操作</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="(k, v) in newsList">
+				<td>{{v.id}}</td>
+				<td>{{v.title}}</td>
+				<td>{{v.time}}</td>
+				<td>{{v.click}}</td>
+				<td>
+					<a ui-sref="editNews({nid:v.id})">编辑</a>|
+					<a href="javascript:;" ng-click="toRecycle(v.id)">删除</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div>{{mobile}}</div>

@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><h1>欢迎来到赵一鸣博客后台</h1>

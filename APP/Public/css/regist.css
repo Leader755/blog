@@ -1,0 +1,16 @@
+body{overflow-y:auto;overflow-x:hidden;background-image:url("../images/login-bg.jpg");background-repeat:no-repeat;background-size:cover;background-position:center top;}
+.registWrap{width:100%;max-width:310px;position:absolute;left:50%;margin-left:-155px;top:50px;}
+h1{display:block;margin-bottom:20px;text-align:center;color:#fff;font-size:20px;}
+.registContent{padding:20px 0;background-color:#fff;border-radius:5px;margin-bottom:10px;}
+.logo{text-align:center;margin-bottom:20px;}
+.logo img{vertical-align:middle;}
+.promptTxt{color:#b6b6b6;font-size:16px;height:30px;line-height:30px;margin-bottom:20px;padding:0 15px;}
+.registMessage{padding:0 15px;}
+input{width:99%;height:35px;background-color:#eaeaec;margin-bottom:15px;border:1px solid #eaeaec;border-radius:6px;padding-left:1%;}
+select{width:100%;height:35px;border:1px solid #eaeaec;margin-bottom:15px;border-radius:6px;}
+.loginBtn{width:100%;height:40px;background-color:#6bc5a4;color:#fff;font-size:18px;text-align:center;line-height:40px;cursor:pointer;border-radius:6px;}
+.loginBtn:hover{background-color:#688ac2;}
+.registWrap p a{color:#fff;}
+.registWrap p a:nth-child(1){float:left;}
+.registWrap p a:nth-child(2){float:right;}
+.registWrap p a:hover{text-decoration:underline;}

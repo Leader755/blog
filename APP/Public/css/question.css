@@ -1,0 +1,8 @@
+.askWindow{display:none;width:100%;max-width:310px;position:fixed;overflow:hidden;background-color:#fff;border:1px solid #ccc;border-radius:5px;padding:10px;cursor:move;}
+.askWindow input,.askWindow textarea{width:99%;height:35px;background-color:#eaeaec;margin-bottom:15px;border:1px solid #eaeaec;border-radius:6px;padding-left:1%;}
+.askWindow textarea{height:150px;resize:none;}
+.answerContent:nth-child(odd){background-color:#6bc5a4;}
+.answerContent:nth-child(even){background-color:#688ac2;}
+@media only screen and (min-width:1000px){
+	.askWindow{left:50%;margin-left:-155px;top:20%;}
+}

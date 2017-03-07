@@ -1,0 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit();?><style type="text/css">	li{min-height:30px;line-height:30px;}
+	.second{margin-left:20px;margin-bottom:10px;}
+	.third{margin-left:40px;margin-bottom:10px;}
+</style><div class="allTable"><a ui-sref="addNode({pid:0, level:1})">添加应用</a><ul ng-repeat="(k, v) in nodeList"><li class="first"><span>{{v.remark}}</span><a ui-sref="addNode({pid:v.id, level:2})">[添加控制器]</a><ul ng-repeat="(k2, v2) in v.child"><li class="second"><span>{{v2.remark}}</span><a ui-sref="addNode({pid:v2.id, level:3})">[添加方法]</a><ul ng-repeat="(k3, v3) in v2.child"><li class="third"><span>{{v3.remark}}</span></li></ul></li></ul></li></ul></div>

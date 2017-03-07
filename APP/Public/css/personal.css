@@ -1,0 +1,6 @@
+.personalEidt{background-color:#fff;padding:10px;}
+.editPanel{overflow:hidden;clear:both;margin-bottom:20px;}
+.editPanel ul li{height:25px;float:left;margin-right:15px;cursor:pointer;}
+.editPanel ul li.on{border-bottom:2px solid #65cea7;}
+.personalMessage p,.resizePwd p{margin-bottom:15px;}
+.resizePwd{display:none;}
