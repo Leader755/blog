@@ -1,7 +1,7 @@
 /**
  *用户列表angular控制器 
  */
-define(['app', 'userListSer'], function(app){
+define(['userListSer'], function(app){
 	return app.controller('userListCtr', ['$scope', '$http', 'userListSer', function($scope, $http, userListSer){
 		//获取用户列表数据
 		userListSer.userData().then(function(result){
@@ -65,7 +65,7 @@ define(['app', 'userListSer'], function(app){
 					$ridArry.push($rid.eq(i).val());
 				}
 			}
-			//想后台发送数据
+			//向后台发送数据
 			if($ridArry.length>0){
 				$http({
 					url : assignRoleFormPath,

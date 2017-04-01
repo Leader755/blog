@@ -18,7 +18,7 @@
             '__PUBLIC__' => __ROOT__.'/'.APP_NAME.'/Public'
         ),
         //浏览器上显示sql调试信息和控制台信息：
-        'SHOW_PAGE_TRACE'=>true,
+        'SHOW_PAGE_TRACE'=>false,
         //url路径
         'URL_MODEL' => 1,
         //session存储

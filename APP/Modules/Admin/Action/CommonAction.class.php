@@ -4,7 +4,7 @@
     
     class CommonAction extends Action{   
         public function _initialize(){
-            //判断当前用户是否登录登录状态
+            //判断当前用户是否处于登录状态
             if( !isset( $_SESSION['uname'] ) || !isset( $_SESSION['uid'] ) ){
                 $this->redirect('Admin/Login/index');
             }

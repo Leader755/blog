@@ -53,6 +53,11 @@
         }
         //新闻列表
         public function newsList(){
+            $data = array(
+                array('name'=>'zym', 'age'=>24, 'sex'=>'man'),
+                array('name'=>'zmm', 'age'=>23, 'sex'=>'woman')
+            );
+            $this->assign('data', $data);
             $this->display('newsList');
         }
         public function newsListData(){
@@ -99,5 +104,22 @@
             $restoreMessage = $_POST['nid'];
             M('news')->query('delete from '.C('DB_PREFIX').'news where id='.$restoreMessage);
             echo 1;
+        }
+        //ajaxFileUpload测试
+        public function fileUp(){
+            $this->display('fileUp');
+        }
+        //ajaxfileupload传输的文件
+        public function fileHandle(){
+            $txtMessage = $_POST;
+            $fileMessage = $_FILES;
+            
+            if(is_uploaded_file($fileMessage['file1']['tmp_name'])){
+                if(move_uploaded_file($fileMessage['file1']['tmp_name'], './APP/Public/uploads/images/'.$fileMessage['file1']['name'])){
+                    echo '1';   
+                }else{
+                    echo '0';
+                }
+            }
         }
     }

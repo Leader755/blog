@@ -31,6 +31,7 @@
 							<li><a ui-sref="publishNews" class="router">发布新闻</a></li>
 							<li><a ui-sref="newsList" class="router">新闻管理</a></li>
 							<li><a ui-sref="recycle" class="router">回收站</a></li>
+							<li><a ui-sref="fileUp" class="router">文件上传</a></li>
 						</ul>
 					</li>
 					<li>
@@ -42,6 +43,18 @@
 							<li><a ui-sref="addUser" class="router">添加用户</a></li>
 							<li><a ui-sref="addRole" class="router">添加角色</a></li>
 							<li><a ui-sref="addNode" class="router">添加节点</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="tmp slide"><span><i class="fa fa-hacker-news"></i>ZTree</span></a>
+						<ul class="navList">
+							<li><a ui-sref="ztree" class="router">ztree树操作</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="tmp slide"><span><i class="fa fa-hacker-news"></i>Angular翻页</span></a>
+						<ul class="navList">
+							<li><a ui-sref="page({currentPage : 1})" class="router">PAGE</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -102,7 +115,11 @@
 				newsListDataPath = '{:U("Admin/News/newsListData")}',
 				toRecyclePath = '{:U("Admin/News/toRecycle")}',
 				editNewsPath = '{:U("Admin/News/editNews")}',
-				editNewsDataPath = '{:U("Admin/News/editNewsData")}';
+				editNewsDataPath = '{:U("Admin/News/editNewsData")}',
+				fileUpPath = '{:U("Admin/News/fileUp")}',
+				ztreePath = '{:U("Admin/Ztree/ztreeShow")}',
+				pagePath = '{:U("Admin/Page/pageShow")}',
+				pageShowDataPath = '{:U("Admin/Page/pageShowData")}';
 		</script>
 		<script type="text/javascript" src="__PUBLIC__/js/require.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/js/main.js"></script>

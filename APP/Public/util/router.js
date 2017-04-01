@@ -1,7 +1,7 @@
 /**
  * angular路由模块 
  */
-var routerArry = ['app', 'addNodeCtr', 'nodeListCtr', 'userListCtr', 'addUserCtr', 'addRoleCtr', 'roleListCtr', 'accessListCtr', 'publishNewsCtr', 'newsListCtr', 'editNewsCtr'];
+var routerArry = ['app', 'addNodeCtr', 'nodeListCtr', 'userListCtr', 'addUserCtr', 'addRoleCtr', 'roleListCtr', 'accessListCtr', 'publishNewsCtr', 'newsListCtr', 'editNewsCtr', 'pageShowCtr'];
 define(routerArry, function(app){
 	return app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
 		$urlRouterProvider.otherwise('/index');
@@ -62,6 +62,19 @@ define(routerArry, function(app){
 			url : '/editNews/{nid}',
 			templateUrl : editNewsPath,
 			controller : 'editNewsCtr'
+		})
+		.state('fileUp', {
+			url : '/fileUp',
+			templateUrl : fileUpPath
+		})
+		.state('ztree', {
+			url : '/ztree',
+			templateUrl : ztreePath
+		})
+		.state('page', {
+			url : '/page/{currentPage}',
+			templateUrl : pagePath,
+			controller : 'pageShowCtr'
 		})
 	}]);
 });

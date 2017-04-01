@@ -19,16 +19,17 @@ require.config({
 		newsListSer : '../servers/newsListServer',
 		dateFilter : '../filters/dateFilter',
 		editNewsCtr : '../controllers/editNewsController',
-		filterFil : '../filters/filter'
+		filterFil : '../filters/filter',
+		pageShowCtr : '../controllers/pageShowController'
 	},
 	shim : {
 		angular : {
-			deps : ['jquery'],
-			exports : 'angular'
+			exports : 'angular',
+			deps : ['jquery']
 		},
 		uiRouter : {
-			deps : ['angular'],
-			exports : 'ui-router'
+			exports : 'ui-router',
+			deps : ['angular']
 		},
 		app : {
 			deps : ['uiRouter']
