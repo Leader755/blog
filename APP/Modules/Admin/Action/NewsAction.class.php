@@ -61,7 +61,7 @@
             $this->display('newsList');
         }
         public function newsListData(){
-            $newsList = M('news')->field(array('id', 'title', 'time', 'click'))->where(array('status'=>1))->select();
+            $newsList = M('news')->query('select id,title,time,click from '.C('DB_PREFIX').'news where status=1 order by time desc');
             echo json_encode($newsList);
         }
         //编辑新闻

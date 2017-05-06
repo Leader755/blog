@@ -29,7 +29,15 @@
 </html>
 <script type="text/javascript" type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
 <script type="text/javascript" type="text/javascript">
+	//点击登录
 	$('#loginBtn').click(validate);
+	//回车事件登录
+	document.onkeydown = function(e){
+		var e = e || window.event;
+		if(e && e.keyCode==13){
+			validate();
+		}
+	}
 	var registNum = 0;
 	function validate(){
 		registNum += 1;

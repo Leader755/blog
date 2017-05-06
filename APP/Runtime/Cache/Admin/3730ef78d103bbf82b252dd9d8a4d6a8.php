@@ -16,7 +16,7 @@
 		$.ajax({
 			url : '<?php echo U("Admin/Ztree/ztreeData");?>',
 			success : function(data){
-				var data = eval(data);
+				var data = JSON.parse(data);
 				$.fn.zTree.init($("#treeDemo"), setting, data);
 			}
 		});
