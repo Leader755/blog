@@ -2,7 +2,7 @@
  *添加角色angular控制器 
  */
 define(['app'], function(app){
-	return app.controller('addRoleCtr', ['$scope', '$http', function($scope, $http){
+	return ['$scope', '$http', function($scope, $http){
 		$scope.addRoleForm = function(){
 			//获取添加角色所需数据
 			var $roleName = $('#roleName').val(),
@@ -33,5 +33,5 @@ define(['app'], function(app){
 				}
 			});
 		}
-	}]);
+	}];
 });

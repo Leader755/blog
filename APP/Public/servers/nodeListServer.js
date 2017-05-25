@@ -2,7 +2,7 @@
  *节点列表angular控制器 
  */
 define(['app'], function(app){
-	return app.factory('nodeListSer', ['$http', function($http){
+	return ['$http', function($http){
 		return {
 			//节点数据
 			nodeData : function(){
@@ -14,5 +14,5 @@ define(['app'], function(app){
 				});
 			}
 		}
-	}]);
+	}];
 });

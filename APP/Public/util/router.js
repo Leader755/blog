@@ -1,80 +1,80 @@
 /**
  * angular路由模块 
  */
-var routerArry = ['app', 'addNodeCtr', 'nodeListCtr', 'userListCtr', 'addUserCtr', 'addRoleCtr', 'roleListCtr', 'accessListCtr', 'publishNewsCtr', 'newsListCtr', 'editNewsCtr', 'pageShowCtr'];
-define(routerArry, function(app){
+
+define(['app', 'angularAMD'], function(app, angularAMD){
 	return app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
 		$urlRouterProvider.otherwise('/index');
-		$stateProvider.state('index', {
+		$stateProvider.state('index', angularAMD.route({
 			url : '/index',
 			templateUrl : indexPath
-		})
-		.state('nodeList', {
+		}))
+		.state('nodeList', angularAMD.route({
 			url : '/nodeList',
 			templateUrl : nodeListPath,
-			controller : 'nodeListCtr'
-		})
-		.state('addNode', {
+            controllerUrl : 'nodeListCtr'
+		}))
+		.state('addNode', angularAMD.route({
 			url : '/addNode/{pid}/{level}',
 			templateUrl : addNodePath,
-			controller : 'addNodeCtr'
-		})
-		.state('userList', {
+            controllerUrl : 'addNodeCtr'
+		}))
+		.state('userList', angularAMD.route({
 			url : '/userList',
 			templateUrl : userListPath,
-			controller : 'userListCtr'
-		})
-		.state('addUser', {
+            controllerUrl : 'userListCtr'
+		}))
+		.state('addUser', angularAMD.route({
 			url : '/addUser',
 			templateUrl : addUserPath,
-			controller : 'addUserCtr'
-		})
-		.state('addRole', {
+            controllerUrl : 'addUserCtr'
+		}))
+		.state('addRole', angularAMD.route({
 			url : '/addRole',
 			templateUrl : addRolePath,
-			controller : 'addRoleCtr'
-		})
-		.state('roleList', {
+            controllerUrl : 'addRoleCtr'
+		}))
+		.state('roleList', angularAMD.route({
 			url : '/roleList',
 			templateUrl : roleListPath,
-			controller : 'roleListCtr'
-		})
-		.state('accessList', {
+            controllerUrl : 'roleListCtr'
+		}))
+		.state('accessList', angularAMD.route({
 			url : '/accessList/{rid}',
 			templateUrl : accessListPath,
-			controller : 'accessListCtr'
-		})
-		.state('publishNews', {
+            controllerUrl : 'accessListCtr'
+		}))
+		.state('publishNews', angularAMD.route({
 			url : '/publishNews',
 			templateUrl : publishNewsPath,
-			controller : 'publishNewsCtr'
-		})
-		.state('newsList', {
+            controllerUrl : 'publishNewsCtr'
+		}))
+		.state('newsList', angularAMD.route({
 			url : '/newsList',
 			templateUrl : newsListPath,
-			controller : 'newsListCtr'
-		})
-		.state('recycle', {
+            controllerUrl : 'newsListCtr'
+		}))
+		.state('recycle', angularAMD.route({
 			url : '/recycle',
 			templateUrl : recyclePath
-		})
-		.state('editNews', {
+		}))
+		.state('editNews', angularAMD.route({
 			url : '/editNews/{nid}',
 			templateUrl : editNewsPath,
-			controller : 'editNewsCtr'
-		})
-		.state('fileUp', {
+            controllerUrl : 'editNewsCtr'
+		}))
+		.state('fileUp', angularAMD.route({
 			url : '/fileUp',
 			templateUrl : fileUpPath
-		})
-		.state('ztree', {
+		}))
+		.state('ztree', angularAMD.route({
 			url : '/ztree',
 			templateUrl : ztreePath
-		})
-		.state('page', {
+		}))
+		.state('page', angularAMD.route({
 			url : '/page/{currentPage}',
 			templateUrl : pagePath,
-			controller : 'pageShowCtr'
-		})
+            controllerUrl : 'pageShowCtr'
+		}))
 	}]);
 });

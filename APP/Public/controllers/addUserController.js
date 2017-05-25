@@ -2,7 +2,7 @@
  *添加用户angular控制器 
  */
 define(['app'], function(app){
-	return app.controller('addUserCtr', ['$scope', '$http', function($scope, $http){
+	return ['$scope', '$http', function($scope, $http){
 		$scope.addUserForm = function(){
 			//获取用户数据
 			var $uname = $('#uname').val(),
@@ -33,5 +33,5 @@ define(['app'], function(app){
 				}
 			});
 		}
-	}]);
+	}];
 });

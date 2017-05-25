@@ -2,7 +2,7 @@
  *发布新闻angular控制器 
  */
 define(['app'], function(app){
-	return app.controller('publishNewsCtr', ['$scope', '$http', function($scope, $http){
+	return ['$scope', '$http', function($scope, $http){
 		$scope.publishNews = function(){
 			//获取新闻数据
 			var $title = $('#newsTitle').val(),
@@ -35,5 +35,5 @@ define(['app'], function(app){
 				}
 			});
 		}
-	}]);
+	}];
 });

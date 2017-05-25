@@ -3,7 +3,7 @@
  */
 
 define(['app'], function(app){
-	return app.controller('pageShowCtr', ['$scope', '$http', '$stateParams', function($scope, $http, $stateParams){
+	return ['$scope', '$http', '$stateParams', function($scope, $http, $stateParams){
 		$http({
 			url : pageShowDataPath,
 			data : {
@@ -14,5 +14,5 @@ define(['app'], function(app){
 			$scope.userData = result.data;
 			$scope.currentPage = Number(result.data.currentPage);
 		});
-	}]);
+	}];
 });

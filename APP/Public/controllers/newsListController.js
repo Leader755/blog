@@ -1,8 +1,8 @@
 /**
  *后台新闻列表angular控制器 
  */
-define(['app', 'newsListSer', 'filterFil'], function(app){
-	return app.controller('newsListCtr', ['$scope', 'newsListSer', '$http', '$filter', function($scope, newsListSer, $http, $filter){
+define(['app', 'newsListSer'], function(){
+	return ['$scope', 'newsListSer', '$http', function($scope, newsListSer, $http){
 		//显示列表
 		newsListSer.newsData().then(function(result){
 			$scope.newsList = result;
@@ -30,8 +30,5 @@ define(['app', 'newsListSer', 'filterFil'], function(app){
 				}
 			});
 		};
-		//自定义过滤器
-		$scope.mobile = 13126919251;
-		$scope.mobile = $filter('truncate')($scope.mobile, 6);
-	}]);
+	}];
 });

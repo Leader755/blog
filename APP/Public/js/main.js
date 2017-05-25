@@ -4,6 +4,7 @@ require.config({
 		jquery : '../js/jquery',
 		angular : '../js/angular.min',
 		uiRouter : '../js/angular-ui-router',
+		angularAMD : '../js/angularAMD',
 		commonJs : '../js/commonJs',
 		addNodeCtr : '../controllers/addNodeController',
 		nodeListCtr : '../controllers/nodeListController',
@@ -27,9 +28,12 @@ require.config({
 			exports : 'angular',
 			deps : ['jquery']
 		},
+        angularAMD : {
+		    deps : ['angular']
+        },
 		uiRouter : {
 			exports : 'ui-router',
-			deps : ['angular']
+			deps : ['angularAMD']
 		},
 		app : {
 			deps : ['uiRouter']

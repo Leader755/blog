@@ -2,7 +2,7 @@
  *添加节点angular控制器 
  */
 define(['app'], function(app){
-	return app.controller('addNodeCtr', ['$scope', '$http', '$stateParams', function($scope, $http, $stateParams){
+	return ['$scope', '$http', '$stateParams', function($scope, $http, $stateParams){
 		//判断节点具体名称
 		switch($stateParams.level){
 			case '1':
@@ -49,5 +49,5 @@ define(['app'], function(app){
 				}
 			});
 		}
-	}]);
+	}];
 });

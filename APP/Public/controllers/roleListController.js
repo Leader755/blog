@@ -2,7 +2,7 @@
  *角色管理angular控制器 
  */
 define(['app'], function(app){
-	return app.controller('roleListCtr', ['$scope', '$http', function($scope, $http){
+	return ['$scope', '$http', function($scope, $http){
 		//获取角色列表数据
 		$http({
 			url : roleListDataPath,
@@ -10,5 +10,5 @@ define(['app'], function(app){
 		}).then(function(result){
 			$scope.roleList = result.data;
 		});
-	}]);
+	}];
 });

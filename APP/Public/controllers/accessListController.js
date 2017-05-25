@@ -2,7 +2,7 @@
  * 权限列表angular控制器
  */
 define(['app', 'nodeListSer'], function(app){
-	return app.controller('accessListCtr', ['$scope', 'nodeListSer', '$stateParams', '$http', function($scope, nodeListSer, $stateParams, $http){
+	return ['$scope', 'nodeListSer', '$stateParams', '$http', function($scope, nodeListSer, $stateParams, $http){
 		//节点数据
 		nodeListSer.nodeData().then(function(result){
 			$scope.nodeList = result;
@@ -65,5 +65,5 @@ define(['app', 'nodeListSer'], function(app){
 				}
 			});
 		}
-	}]);
+	}];
 });
