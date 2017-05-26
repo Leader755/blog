@@ -1,12 +1,17 @@
 /**
  *后台新闻列表angular控制器 
  */
-define(['app', 'newsListSer'], function(){
-	return ['$scope', 'newsListSer', '$http', function($scope, newsListSer, $http){
+
+define([], function(){
+	return ['$scope', '$http', function($scope, $http){
 		//显示列表
-		newsListSer.newsData().then(function(result){
-			$scope.newsList = result;
-		});
+        $http({
+            url : newsListDataPath,
+            method : 'post'
+        }).then(function(result){
+            $scope.newsList = result.data;
+        });
+
 		//加入回收站
 		$scope.toRecycle = function(nid){
 			if(!nid){
