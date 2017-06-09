@@ -72,7 +72,7 @@ define(['app', 'angularAMD'], function(app, angularAMD){
 			templateUrl : ztreePath
 		}))
 		.state('page', angularAMD.route({
-			url : '/page/{currentPage}',
+			url : '/page/',
 			templateUrl : pagePath,
             controllerUrl : 'pageShowCtr'
 		}))

@@ -13,7 +13,7 @@
 			<tr ng-repeat="(k, v) in newsList">
 				<td>{{v.id}}</td>
 				<td>{{v.title}}</td>
-				<td>{{v.time}}</td>
+				<td>{{v.time | date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
 				<td>{{v.click}}</td>
 				<td>
 					<a ui-sref="editNews({nid:v.id})">编辑</a>|
