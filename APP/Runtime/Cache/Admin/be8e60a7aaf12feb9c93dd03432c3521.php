@@ -1,6 +1,0 @@
-<?php if (!defined('THINK_PATH')) exit();?><div><style>        .askWindow{display:none;width:100%;max-width:310px;position:fixed;overflow:hidden;background-color:#fff;border:1px solid #ccc;border-radius:5px;padding:10px;}
-        @media only screen and (min-width:1000px){
-            .askWindow{left:50%;margin-left:-155px;top:20%;}
-        }
-    </style><div class="allTable"><table cellpadding="0" cellpadding="0"><thead><tr><td>用户名</td><td>邮箱</td><td>操作</td></tr></thead><tbody><tr ng-repeat="(k, v) in userList"><td>{{v.uname}}</td><td>{{v.email}}</td><td><a href="javascript:;" ng-click="removeUser(v.id);">删除</a>|
-                    <a href="javascript:;" ng-click="assignRole(v.id);">分配角色</a></td></tr></tbody></table></div><div class="askWindow" id="askWindow" style="display: none; left: 714px; top: 182px;"><div class="allTable"><table cellpadding="0" cellpadding="0"><thead><tr><td>角色名称</td><td>选择</td></tr></thead><tbody><tr ng-repeat="(k, v) in roleList"><td>{{v.remark}}</td><td><input type="checkbox" value="{{v.id}}" class="rid" /></td></tr></tbody></table></div><input type="button" value="确认" class="commonBtn" ng-click="confirmAssign();" /><input type="button" value="取消" class="commonBtn" ng-click="cancelAssign();" /></div></div>

@@ -24,10 +24,10 @@
 				num+=1;
 			}
 		}
-		if(num!=$inptLength){
-			alert('邮箱或密码填写错误！');
-			return;
-		}
+//		if(num!=$inptLength){
+//			alert('邮箱或密码填写错误！');
+//			return;
+//		}
 		$.ajax({
 			url : "<?php echo U('Admin/Login/loginValidate');?>",
 			type : "post",
